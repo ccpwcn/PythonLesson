@@ -14,3 +14,11 @@ print(10 / 5)
 print(10 % 6)
 # 手动控制运算优先级
 print(10 * (2 - 2))
+
+# 复数
+a = 3 + 2j
+b = 2 + 5j
+# 复数求和
+print(a + b)
+# 共轭复数
+print('共轭复数：', a.conjugate())
