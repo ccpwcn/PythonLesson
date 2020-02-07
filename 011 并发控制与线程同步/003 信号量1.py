@@ -1,4 +1,4 @@
-# 信号号的线程同步方式，在并发模型中具有重要意义，此处做一个并发抢购示例
+# 信号号的线程同步方式，在并发模型中具有重要意义，此处做一个并发示例：所有线程就绪，获得信号之后开始行动
 import threading
 
 
@@ -46,5 +46,4 @@ semaphore.release()
 for t in threads:
     t.join()
 # 判断库存是否为0，为0就是对的，否则就说明抢购出现bug了，抢购的基本要求是：无论如何都不能多卖
-assert goods.total == 0
-print('完成')
+print(goods.total)
