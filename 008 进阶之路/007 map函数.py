@@ -3,12 +3,10 @@ print(names)
 for name in names:
     print(name)
 
-# 给每个成员追加一个换行符
+# 给每个成员后面加一个换行
 m = map(lambda x: x + '\n', names)
 print(m)  # 会得到一个map对象
-
-l = list(m)  # 转为list
-print(l)
+print(list(m))  # 转为list输出
 
 
 numbers = [1, 2, 3, 4, 5]
