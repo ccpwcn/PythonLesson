@@ -10,6 +10,8 @@ def larger(n):
 new_numbers = filter(larger, numbers)
 print(list(new_numbers))
 
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # 筛选出3的倍数
 new_numbers = filter(lambda x: x % 3 is 0, numbers)
 print(list(new_numbers))

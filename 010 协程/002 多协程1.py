@@ -7,7 +7,7 @@ import gevent
 import requests
 
 
-def f(url):
+def task(url):
     print('GET: %s' % url)
     resp = requests.get(url)
     data = resp.text
@@ -16,7 +16,7 @@ def f(url):
 
 # 本例中，需要等待多个协程全部返回，所以要使用joinall，并且依据您的网络速度，它们执行完成的顺序是不确定的。
 gevent.joinall([
-    gevent.spawn(f, 'https://www.baidu.com/'),
-    gevent.spawn(f, 'https://www.163.com/'),
-    gevent.spawn(f, 'https://www.qq.com/'),
+    gevent.spawn(task, 'https://www.baidu.com/'),
+    gevent.spawn(task, 'https://www.163.com/'),
+    gevent.spawn(task, 'https://www.qq.com/'),
 ])

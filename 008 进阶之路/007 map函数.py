@@ -1,12 +1,7 @@
 names = ['a.txt', 'b.txt', 'c.txt', 'd.txt']
-print(names)
-for name in names:
-    print(name)
-
 # 给每个成员后面加一个换行
 m = map(lambda x: x + '\n', names)
-print(m)  # 会得到一个map对象
-print(list(m))  # 转为list输出
+print(list(m))  # 将得到的map对象转为list输出
 
 
 numbers = [1, 2, 3, 4, 5]
