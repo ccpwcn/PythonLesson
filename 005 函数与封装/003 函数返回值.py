@@ -10,3 +10,10 @@ print(add(1, 2))
 def some():
     return 1, 2, 3
 print(some())
+
+# 没有明确返回值的函数
+def p(n):
+    print(n)
+r = p(10)
+print(r)
+
